@@ -1,0 +1,67 @@
+/* Default styles */
+.app-container {
+  transition: all 0.3s ease-in-out;
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  padding: 40px;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+
+.aboutskills {
+  display:flex;
+} 
+
+/* Professional Mode */
+.professional {
+  background-color: #090909;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.professional h1, .professional h2 {
+  font-family: "Federo", sans-serif;
+}
+
+
+/* Personality Mode */
+.personality {
+  color: #141d2d;
+  font-family: "Fredoka", sans-serif;
+  background-color: #141d2d;
+}
+
+.personality h1, .personality h2 {
+  font-family: "Caprasimo", serif;
+}
+
+
+
+/* Switch Button */
+.mode-switch {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+
+
+
+.app-container.professional .main-content {
+  padding-top: 80px; 
+}
+
+.app-container.personality .main-content {
+  padding-top: 130px;
+}
+
+
+
+
+
