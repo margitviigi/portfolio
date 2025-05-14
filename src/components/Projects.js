@@ -42,6 +42,24 @@ const projectsData = [
     website: "https://hindamine.ita.voco.ee/",
     github: "#",
   },
+  {
+    id: 5,
+    title: "Coming Soon!",
+    image: "https://via.placeholder.com/600x400?text=New+Project",
+    description: "Exciting new project in progress...",
+    tools: ["TBD"],
+    website: "#",
+    github: "#",
+  },
+  {
+    id: 6,
+    title: "Stay Tuned!",
+    image: "https://via.placeholder.com/600x400?text=Next+Big+Thing",
+    description: "Another awesome project on the way!",
+    tools: ["TBD"],
+    website: "#",
+    github: "#",
+  },
 ];
 
 function Projects({ mode }) {

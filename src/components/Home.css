@@ -1,5 +1,5 @@
 /* PROFESSIONAL MODE */
-.home-container .professional {
+.home-container.professional {
     background-color: #121212;
     color: white;
     display: flex;
@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100vw;
     text-align: center;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   }
@@ -28,6 +29,7 @@
   
   /* */
   .home-container.personality {
+    padding-top: -120px;
     background: radial-gradient(circle, #73b099, #2c484f, #141d2d);
     color: #1a1a1a;
     display: flex;
@@ -35,6 +37,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100vw;
     text-align: center;
     transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
   }

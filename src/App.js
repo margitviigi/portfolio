@@ -7,6 +7,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact"; 
+import Footer from "./components/Footer";
 
 function App() {
   const [mode, setMode] = useState("professional");
@@ -25,6 +26,7 @@ function App() {
             <Route
               path="/about"
               element={
+
                 <div className="aboutskills">
                   <About mode={mode} />
                   <Skills mode={mode} />
@@ -35,6 +37,7 @@ function App() {
             <Route path="/contact" element={<Contact mode={mode} />} />
           </Routes>
         </div>
+        <Footer mode={mode} />
       </div>
     </Router>
   );

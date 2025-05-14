@@ -57,6 +57,7 @@
 
 /* Personality Mode Styles */
 .custom-navbar.personality {
+  z-index: 10;
   background: linear-gradient(135deg, #eeb11c, #fd725e, #ff7674);
   height: 120px;
   display: flex;

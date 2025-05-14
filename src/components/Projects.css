@@ -1,6 +1,9 @@
 .projects-container {
-  text-align: center;
-  padding: 40px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;   
+  box-sizing: border-box;
 }
 
 .projects-title {
@@ -8,14 +11,16 @@
   margin-bottom: 30px;
 }
 
+.personality-mode h2 {
+  color:#f9f0c6;
+} 
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
-  justify-items: center;
-  display: flex;
-  flex-direction: row;
-
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card {
@@ -27,10 +32,21 @@
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-  max-width: 350px;
+  width:100%;
+  max-width: none;
   height: 100%;
   position: relative;
   overflow: hidden;
+}
+
+.project-card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-overlay {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
 }
 
 .image-wrapper {
@@ -60,8 +76,10 @@
   align-items: center;
   gap: 10px;
   flex-direction: column;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
 }
+
 
 .project-card:hover .card-overlay {
   opacity: 1;
@@ -106,6 +124,10 @@
   font-size: 0.9rem;
 }
 
+.personality-mode.projects-container {
+  background: none;
+  color: #222;
+}
 
 .personality-mode .project-card {
   background: linear-gradient(145deg, #ffe2ec, #f9f0c6);
@@ -113,10 +135,24 @@
 }
 
 .personality-mode .overlay-btn {
-  background: #73b099;
+  background:#4fab99;
   color: white;
 }
 
 .personality-mode .overlay-btn:hover {
   background: #2c484f;
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    max-width: 90%;
+  }
+
+  .image-wrapper {
+    height: 200px;
+  }
 }
