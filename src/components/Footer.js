@@ -28,7 +28,7 @@ function Footer({ mode }) {
           {isProfessional ? (
             <span className="footer-tag">Crafted with care </span>
           ) : (
-            <span className="footer-tag">Designed with sparkles </span>
+            <span className="footer-tag">Designed to have fun and challenge myself.</span>
           )}
         </div>
       </div>

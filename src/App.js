@@ -8,6 +8,9 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact"; 
 import Footer from "./components/Footer";
+import AboutGame from "./components/AboutGame";
+import IntroScreen from "./components/IntroScreen";
+
 
 function App() {
   const [mode, setMode] = useState("professional");
@@ -22,17 +25,25 @@ function App() {
         <CustomNavbar mode={mode} toggleMode={toggleMode} />
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<Home mode={mode} />} />
             <Route
-              path="/about"
-              element={
-
+              path="/"
+              element={mode === "personality" ? <IntroScreen /> : <Home mode={mode} />}
+            />
+            <Route
+            path="/about"
+            element={
+              mode === "personality" ? (
+                <AboutGame />
+              ) : (
                 <div className="aboutskills">
                   <About mode={mode} />
                   <Skills mode={mode} />
                 </div>
-              }
-            />
+              )
+            }
+          />
+
+            
             <Route path="/projects" element={<Projects mode={mode} />} />
             <Route path="/contact" element={<Contact mode={mode} />} />
           </Routes>

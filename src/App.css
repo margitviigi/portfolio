@@ -9,6 +9,11 @@
   align-items: center;    
   box-sizing: border-box;
   padding: 80px 40px 40px;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex-grow: 1;
 }
 
 .aboutskills {
