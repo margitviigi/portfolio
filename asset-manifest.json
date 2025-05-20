@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.faa25eea.css",
-    "main.js": "/portfolio/static/js/main.b07fa9eb.js",
+    "main.css": "/portfolio/static/css/main.f8f5e165.css",
+    "main.js": "/portfolio/static/js/main.496f68ca.js",
     "static/media/hakaton.png": "/portfolio/static/media/hakaton.263541345b85ca8882e5.png",
     "static/media/kleidipood.png": "/portfolio/static/media/kleidipood.a44e9b61aa14687c5316.png",
     "static/media/minitoit.png": "/portfolio/static/media/minitoit.cfbfa35d486cd73c89e4.png",
     "static/media/korrastusabi.png": "/portfolio/static/media/korrastusabi.f3b1307b09e7c130efd6.png",
+    "static/media/tita.jpg": "/portfolio/static/media/tita.2b785d05d83e061154c3.jpg",
     "static/media/minupilt.png": "/portfolio/static/media/minupilt.51c4a259ce284fd4c1c0.png",
+    "static/media/mina.jpg": "/portfolio/static/media/mina.25d2964eb1c3f5af8df6.jpg",
+    "static/media/maja.jpg": "/portfolio/static/media/maja.2286804a30c0e2e7b98e.jpg",
+    "static/media/saaremaa.jpg": "/portfolio/static/media/saaremaa.99afa1414c941c515abc.jpg",
+    "static/media/haigla.jpg": "/portfolio/static/media/haigla.4c9e52c916187bc6e6f5.jpg",
     "index.html": "/portfolio/index.html",
-    "main.faa25eea.css.map": "/portfolio/static/css/main.faa25eea.css.map",
-    "main.b07fa9eb.js.map": "/portfolio/static/js/main.b07fa9eb.js.map"
+    "main.f8f5e165.css.map": "/portfolio/static/css/main.f8f5e165.css.map",
+    "main.496f68ca.js.map": "/portfolio/static/js/main.496f68ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.faa25eea.css",
-    "static/js/main.b07fa9eb.js"
+    "static/css/main.f8f5e165.css",
+    "static/js/main.496f68ca.js"
   ]
 }
