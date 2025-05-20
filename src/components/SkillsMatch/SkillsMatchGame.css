@@ -1,0 +1,60 @@
+
+
+.match-game-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.statements {
+  flex: 1;
+  min-width: 300px;
+}
+
+.statement-box {
+  background: #fff0f5;
+  padding: 16px;
+  min-height: 120px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px dashed #ff69b4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-pool {
+  background: #fff0f5;
+  padding: 16px;
+  min-height: 120px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px dashed #ff69b4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-card, .matched-gif {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.level-complete {
+  margin-top: 30px;
+  color:#fff0f5;
+}

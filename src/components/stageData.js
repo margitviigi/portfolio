@@ -1,8 +1,15 @@
+import maja from "../pildid/maja.jpg";
+import mina from "../pildid/mina.jpg";
+import haigla from "../pildid/haigla.jpg";
+import saaremaa from "../pildid/saaremaa.jpg";
+import tita from "../pildid/tita.jpg";
+
 
 const stageData = [
   {
     title: "Level 1: Architecture Student Era",
-    caption: `"Design student by day, pure chaos by night."`,
+    caption: `"Design student by day, pure chaos by 5pm."`,
+    altImage: maja,
     question: "What did I do after enrolling in architecture school?",
     choices: [
       {
@@ -21,14 +28,15 @@ const stageData = [
         altCaption: "Honestly... tempting.",
       },
       {
-        text: "Got overwhelmed by illness, depression and cost of living, missed every single deadline and dropped out.",
+        text: "Got full time job as well and got paralyzed by work overload. Who knew 80 work hours a week is enough to make you ill, depressed, and virtually useless?!",
         correct: true,
       },
     ],
   },
   {
     title: "Level 2: Post-Dropout Vibes. Not very good ones.",
-    caption: `"After that, do I even deserve to have a career that I actually like?"`,
+    caption: `"In this rare photograph you see one of very few beams of light I saw for a couple of years."`,
+    altImage: mina,
     question: "What did I try next after leaving school?",
     choices: [
       {
@@ -54,7 +62,8 @@ const stageData = [
   },
   {
     title: "Level 3: Radiographer Life",
-    caption: `"Scan brain, repeat. Still no signs of job satisfaction."`,
+    caption: `"Scan brain, repeat. No signs of job satisfaction."`,
+    altImage: haigla,
     question: "What was a defining feature of my radiographer years?",
     choices: [
       {
@@ -81,10 +90,11 @@ const stageData = [
   {
     title: "Level 4: The Turning Point",
     caption: `"It started on Tinder date: some girls get killed, but I got married."`,
+    altImage: saaremaa,
     question: "What reignited my creative fire?",
     choices: [
       {
-        text: "My date gave me vitamin D claiming it was LSD and clarity came anyway",
+        text: "My date gave me vitamin D claiming it was LSD but clarity came anyway",
         correct: false,
         altCaption: "X-ray rooms have no windows. I saw no daylight for half a year at the time. I might had started hallucinating had it actually happened",
       },
@@ -99,7 +109,7 @@ const stageData = [
         altCaption: "I did not do it, but I maybe I should. As a side hustle, if my schedule allows it, after you hire me.",
       },
       {
-        text: "Had two babies. Now I have two sweet and smart toddlers. I don't want them to think that after one failure you should settle for less.",
+        text: "Had two babies. Now I have two toddlers. I want them to see me happy and passionate about my job.",
         correct: true,
       },
     ],
@@ -107,6 +117,7 @@ const stageData = [
   {
     title: "Level 5: The Leap",
     caption: `"I went back to work and thought.. "No"."`,
+    altImage: tita,
     question: "What did I do on maternity leave?",
     choices: [
       {
@@ -141,7 +152,7 @@ const stageData = [
         altCaption: "Who would pay me to do that, animals or toddlers?",
       },
       {
-        text: "Running a dating app exclusively for setting up toddler playdates.",
+        text: "Running a 'dating' app exclusively for setting up toddler playdates.",
         correct: false,
         altCaption: "If it was true I would never call it a dating app.",
       },

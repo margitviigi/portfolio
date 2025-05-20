@@ -14,7 +14,9 @@ function AboutGame() {
       setWrongAnswer(null);
       setStageIndex((prev) => prev + 1);
     } else {
-      setWrongAnswer({ altCaption });
+      setWrongAnswer({
+       altCaption
+       });
     }
   };
 
@@ -46,6 +48,9 @@ function AboutGame() {
       <>
         <h2>{currentStage.title}</h2>
         <div className="polaroid">
+          {currentStage.altImage && (
+            <img src={currentStage.altImage} alt="Scene image" className="stage-image" />
+          )}
           <p className="caption">{currentStage.caption}</p>
         </div>
         <p className="question">{currentStage.question}</p>

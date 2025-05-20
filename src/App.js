@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import AboutGame from "./components/AboutGame";
 import IntroScreen from "./components/IntroScreen";
+import SkillsMatchGame from "./components/SkillsMatch/SkillsMatchGame";
 
 
 function App() {
@@ -44,7 +45,13 @@ function App() {
           />
 
             
-            <Route path="/projects" element={<Projects mode={mode} />} />
+            <Route path="/projects" element={
+              mode === "personality" ? (
+                <SkillsMatchGame />
+              ) : (
+              <Projects mode={mode} />  
+              )
+              } />
             <Route path="/contact" element={<Contact mode={mode} />} />
           </Routes>
         </div>
