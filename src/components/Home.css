@@ -1,15 +1,19 @@
+.home-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+}
+
 /* PROFESSIONAL MODE */
 .home-container.professional {
     background-color: #121212;
     color: white;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
   }
   
   .professional .welcome-text {

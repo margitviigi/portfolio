@@ -2,18 +2,19 @@
 .app-container {
   transition: all 0.3s ease-in-out;
   text-align: center;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;    
   box-sizing: border-box;
-  padding: 80px 40px 40px;
   justify-content: space-between;
 }
 
 .main-content {
-  flex-grow: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .aboutskills {
@@ -57,9 +58,6 @@
   font-size: 1.2rem;
   cursor: pointer;
 }
-
-
-
 
 
 /*.app-container.professional .main-content {

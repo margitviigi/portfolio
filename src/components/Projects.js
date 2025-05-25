@@ -4,6 +4,8 @@ import minitoit from "../pildid/minitoit.png";
 import korrastusabi from "../pildid/korrastusabi.png";
 import kleidipood from "../pildid/kleidipood.png";
 import hakaton from "../pildid/hakaton.png";
+import ehitus from "../pildid/ehitus.png";
+import haaletus from "../pildid/haaletus.png";
 
 const projectsData = [
   {
@@ -44,20 +46,20 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Coming Soon!",
-    image: "https://via.placeholder.com/600x400?text=New+Project",
-    description: "Exciting new project in progress...",
-    tools: ["TBD"],
-    website: "#",
+    title: "Building company website",
+    image: ehitus,
+    description: "Got to flex my WordPress and web design skills in this group project. Stainvere OY is a building company in Finland that now has this cool bilingual website to show off their best work to both Finnish- and Estonian-speaking clients.",
+    tools: ["WordPress", "Elementor"],
+    website: "https://vso24viigi.ita.voco.ee/ehitus/",
     github: "#",
   },
   {
     id: 6,
-    title: "Stay Tuned!",
-    image: "https://via.placeholder.com/600x400?text=Next+Big+Thing",
-    description: "Another awesome project on the way!",
-    tools: ["TBD"],
-    website: "#",
+    title: "Voting system",
+    image: haaletus,
+    description: "I proudly present yet another voting tool - this one comes with actual database back-end! You can enter the statement to vote over, and up to 11 voters have 5 minutes vote 'yes' or 'no'. Every voting round and vote casted gets logged in the database.",
+    tools: ["SQL", "Php", "HTML", "CSS"],
+    website: "https://vepso.ita.voco.ee/kaisa_margit/index.php",
     github: "#",
   },
 ];
