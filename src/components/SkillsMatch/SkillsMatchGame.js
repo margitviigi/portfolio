@@ -6,65 +6,127 @@ import "./SkillsMatchGame.css";
 function SkillsMatchGame() {
   const [levelIndex, setLevelIndex] = useState(0);
   const [matches, setMatches] = useState({});
+  const [showIntro, setShowIntro] = useState(true);
+
   const currentLevel = levelData[levelIndex];
 
   const handleDrop = (result) => {
-    if (!result.destination) return;
+    const { source, destination, draggableId } = result;
+    if (!destination) return;
 
-    const draggedGifId = result.draggableId;
-    const matchedStatement = result.destination.droppableId;
+    // Dragged back to gifPool
+    if (destination.droppableId === "gifPool") {
+      setMatches((prev) => ({
+        ...prev,
+        [draggableId]: "gifPool",
+      }));
+      return;
+    }
 
-    setMatches((prev) => ({
-      ...prev,
-      [draggedGifId]: matchedStatement,
-    }));
+    // Dropped on a statement — remove any other GIF matched there
+    setMatches((prev) => {
+      const updatedMatches = { ...prev };
+
+      // Remove other GIFs matched to the destination statement
+      Object.entries(updatedMatches).forEach(([gifId, match]) => {
+        if (match === destination.droppableId && gifId !== draggableId) {
+          updatedMatches[gifId] = "gifPool";
+        }
+      });
+
+      // Assign the dragged GIF to the new statement
+      updatedMatches[draggableId] = destination.droppableId;
+
+      return updatedMatches;
+    });
   };
 
-  const isMatchCorrect = (gif) => matches[gif.id] === gif.matchText;
+  const isMatchCorrect = (gifId) => {
+    const gif = currentLevel.gifs.find((g) => g.id === gifId);
+    return matches[gifId] === gif?.matchText;
+  };
 
-  const allCorrect = currentLevel.gifs.every((gif) => isMatchCorrect(gif));
+  const allCorrect = currentLevel.gifs.every((gif) => isMatchCorrect(gif.id));
+
+  if (showIntro) {
+    return (
+      <div className="story-game intro-screen">
+        <h2>Welcome to Skills Match</h2>
+        <p>Match each <strong>GIF</strong> with the statement it best describes.</p>
+        <p>Correct = <span style={{ color: "green" }}>green</span>, Wrong = <span style={{ color: "red" }}>red</span>.</p>
+        <p>You can drag GIFs back and try again!</p>
+        <button className="choice-btn" onClick={() => setShowIntro(false)}>▶ Start</button>
+      </div>
+    );
+  }
 
   return (
     <div className="match-game-container">
       <h2>Level: {currentLevel.level}</h2>
-      <p className="instructions">Drag each GIF to the statement it matches!</p>
+      <p className="instructions">Drag each GIF to the matching statement.</p>
+
       <DragDropContext onDragEnd={handleDrop}>
         <div className="columns">
+          {/* Left Column: Statement Boxes */}
           <div className="statements">
-            {currentLevel.statements.map((statement, index) => (
+            {currentLevel.statements.map((statement) => (
               <Droppable droppableId={statement} key={statement}>
-                {(provided) => (
-                  <div
-                    className="statement-box"
-                    ref={provided.innerRef}
-                    {...provided.droppableProps}
-                  >
-                    {statement}
-                    {Object.entries(matches)
-                      .filter(([, match]) => match === statement)
-                      .map(([gifId]) => {
-                        const gif = currentLevel.gifs.find((g) => g.id === gifId);
-                        return (
-                          <img
-                            key={gifId}
-                            src={gif.gifUrl}
-                            alt=""
-                            className="matched-gif"
-                          />
-                        );
-                      })}
-                    {provided.placeholder}
-                  </div>
-                )}
+                {(provided) => {
+                  const matchedGifId = Object.entries(matches).find(
+                    ([, match]) => match === statement
+                  )?.[0];
+
+                  const gif = currentLevel.gifs.find((g) => g.id === matchedGifId);
+                  const isCorrect = gif && matches[gif.id] === gif.matchText;
+
+                  return (
+                    <div
+                      className={`statement-box ${
+                        matchedGifId
+                          ? isCorrect
+                            ? "correct"
+                            : "incorrect"
+                          : ""
+                      }`}
+                      ref={provided.innerRef}
+                      {...provided.droppableProps}
+                    >
+                      <span className="statement-text">{statement}</span>
+                      {gif && (
+                        <Draggable draggableId={gif.id} index={0}>
+                          {(provided) => (
+                            <img
+                              src={gif.gifUrl}
+                              alt=""
+                              className="matched-gif"
+                              ref={provided.innerRef}
+                              {...provided.draggableProps}
+                              {...provided.dragHandleProps}
+                            />
+                          )}
+                        </Draggable>
+                      )}
+                      {provided.placeholder}
+                    </div>
+                  );
+                }}
               </Droppable>
             ))}
           </div>
 
-          <Droppable droppableId="gifPool" isDropDisabled>
+          {/* Right Column: Gif Pool */}
+          <Droppable droppableId="gifPool">
             {(provided) => (
-              <div className="gif-pool" ref={provided.innerRef} {...provided.droppableProps}>
-                {currentLevel.gifs.map((gif, index) => (
-                  !matches[gif.id] && (
+              <div
+                className="gif-pool"
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+              >
+                {currentLevel.gifs.map((gif, index) => {
+                  const match = matches[gif.id];
+                  if (match && match !== "gifPool") return null;
+
+                  return (
                     <Draggable draggableId={gif.id} index={index} key={gif.id}>
                       {(provided) => (
                         <img
@@ -77,8 +139,8 @@ function SkillsMatchGame() {
                         />
                       )}
                     </Draggable>
-                  )
-                ))}
+                  );
+                })}
                 {provided.placeholder}
               </div>
             )}
@@ -89,14 +151,20 @@ function SkillsMatchGame() {
       {allCorrect && (
         <div className="level-complete">
           <p>Level complete!</p>
-           {levelIndex < levelData.length - 1 ? (
-            <button onClick={() => {
-              setLevelIndex((i) => i + 1);
-              setMatches({});
-            }}>Next Level</button>
+          {levelIndex < levelData.length - 1 ? (
+            <button
+              className="next-level-btn"
+              onClick={() => {
+                setLevelIndex((i) => i + 1);
+                setMatches({});
+                setShowIntro(false);
+              }}
+            >
+              ▶ Next Level
+            </button>
           ) : (
             <p>You’ve matched all my skills!</p>
-                      )}
+          )}
         </div>
       )}
     </div>

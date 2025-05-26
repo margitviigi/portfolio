@@ -20,19 +20,37 @@ function CustomNavbar({ mode, toggleMode }) {
             <h2 className="navbar-brand">Margit Viigi</h2>
           )}
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto nav-links">
-            <Nav.Link as={NavLink} to="/about" className="nav-item">
-              <span>About me</span>
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/projects" className="nav-item">
-              <span>My projects</span>
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/contact" className="nav-item">
-              <span>Contact</span>
-            </Nav.Link>
+            {mode === "professional" ? (
+              <>
+                <Nav.Link as={NavLink} to="/about" className="nav-item">
+                  <span>About Me</span>
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/projects" className="nav-item">
+                  <span>My Projects</span>
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/contact" className="nav-item">
+                  <span>Contact</span>
+                </Nav.Link>
+              </>
+            ) : (
+              <>
+                <Nav.Link as={NavLink} to="/AboutGame" className="nav-item">
+                  <span>Truth Game</span>
+                   </Nav.Link>
+                <Nav.Link as={NavLink} to="/SkillsMatchGame" className="nav-item">
+                  <span>Skills Match</span>
+                   </Nav.Link>
+                <Nav.Link as={NavLink} to="/TriviaCVGame" className="nav-item">
+                  <span>CV Trivia</span>
+                  </Nav.Link>
+              </>
+            )}
           </Nav>
+
           <div className="switch-container">
             <label className="switch">
               <input
@@ -57,7 +75,7 @@ function CustomNavbar({ mode, toggleMode }) {
                 </span>
               </span>
             </label>
-            <span className="personality-tag">Personality Mode </span>
+            <span className="personality-tag">Personality Mode</span>
           </div>
         </Navbar.Collapse>
       </div>

@@ -1,50 +1,49 @@
-/* Main container for the game */
-.story-game {
-  max-width: 800px;
-  min-width: 800px;
-  min-height: 600px; /* Fixed min height for consistent layout */
-  margin: 0 auto;
-  padding: 40px 20px;
-  background: radial-gradient(circle, #fff6f6, #ffe2ec);
-  border-radius: 16px;
-  text-align: center;
+.personality .story-game {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 1000px;
+  height: auto;             /* Fixed height */
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff6f6, #ffe2ec);
   font-family: "Fredoka", sans-serif;
+  color: #2c2c2c;
   box-shadow: 0 6px 24px rgba(255, 102, 153, 0.2);
-  animation: fadeIn 0.6s ease;
-
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-
-  transition: min-height 0.4s ease, width 0.4s ease;
+  overflow: hidden; /* prevents layout shift from content height */
+  transition: all 0.3s ease;
 }
 
-/* Section titles */
-.story-game h2 {
-  font-size: 1.8rem;
+/* Title inside game */
+.personality .story-game h2 {
+  font-size: 2rem;
   color: #ff6699;
   margin-bottom: 20px;
 }
 
-/* Polaroid style frame */
-.polaroid {
+/* Polaroid style */
+.personality .polaroid {
   background: #fff;
   border: 1px solid #ddd;
   padding: 16px;
   margin: 20px auto;
-  max-width: 300px;
-  border-radius: 8px;
-  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 340px;
+  border-radius: 12px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
   transform: rotate(-2deg);
   transition: transform 0.3s ease;
 }
 
-.polaroid:hover {
+.personality .polaroid:hover {
   transform: rotate(0deg) scale(1.02);
 }
 
-.stage-image {
+.personality .stage-image {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
@@ -52,32 +51,29 @@
   margin-bottom: 12px;
 }
 
-/* Caption text inside polaroid */
-.caption {
-  font-size: 0.85rem;
+.personality .caption {
+  font-size: 0.9rem;
   font-style: italic;
-  margin-top: 10px;
-  color: #555;
+  color: #444;
 }
 
-/* Question prompt */
-.question {
-  font-size: 1.2rem;
+/* Question + answers */
+.personality .question {
+  font-size: 1.3rem;
+  font-weight: 600;
   margin: 20px 0 10px;
-  font-weight: 500;
   color: #333;
 }
 
-/* Choice buttons */
-.choices {
+.personality .choices {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 10px;
 }
 
-.choice-btn {
-  background-color: #ff6699;
+.personality .choice-btn {
+  background-color: #fd725e;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -88,30 +84,30 @@
   transition: background-color 0.3s ease;
 }
 
-.choice-btn:hover {
+.personality .choice-btn:hover {
   background-color: #d24c81;
 }
 
-/* Final screen styling */
-.end-screen {
+/* Final screen */
+.personality .end-screen {
   background-color: #fff;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 40px;
   box-shadow: 0 4px 20px rgba(255, 102, 153, 0.2);
   animation: fadeIn 0.6s ease;
 }
 
-.lessons-list {
+.personality .lessons-list {
   list-style: none;
   padding-left: 0;
   margin-top: 20px;
   text-align: left;
-  max-width: 500px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.lessons-list li {
+.personality .lessons-list li {
   background-color: #ffe2ec;
   border-left: 5px solid #ff6699;
   padding: 10px 16px;
@@ -120,15 +116,15 @@
   font-size: 1rem;
 }
 
-/* Easter egg message */
-.easter-egg {
+/* Easter egg */
+.personality .easter-egg {
   margin-top: 30px;
   font-style: italic;
   font-size: 0.95rem;
   color: #666;
 }
 
-.egg-link {
+.personality .egg-link {
   color: #ff6699;
   font-weight: bold;
   text-decoration: none;
@@ -136,21 +132,50 @@
   margin-left: 6px;
 }
 
-.egg-link:hover {
+.personality .egg-link:hover {
   color: #c24477;
   border-bottom: 1px solid #c24477;
 }
 
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Intro screen styling */
+.personality .intro-screen {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
+.personality .intro-screen h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fd725e;
+}
+
+.personality .intro-screen p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #2c2c2c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media (max-width: 600px) {
-  .story-game {
-    width: 90%;
-    min-height: 550px;
+  .personality .story-game {
+    width: 92%;
+    padding: 24px;
+  }
+
+  .personality .polaroid {
+    max-width: 90%;
   }
 }

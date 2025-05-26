@@ -35,7 +35,7 @@ const stageData = [
   },
   {
     title: "Level 2: Post-Dropout Vibes. Not very good ones.",
-    caption: `"In this rare photograph you see one of very few beams of light I saw for a couple of years."`,
+    caption: `"I did not do much worth photographing those days so it was either this selfie or a picture of my 95-year-old grandpa lifting me from bed after shoulder surgery."`,
     altImage: mina,
     question: "What did I try next after leaving school?",
     choices: [
@@ -62,7 +62,7 @@ const stageData = [
   },
   {
     title: "Level 3: Radiographer Life",
-    caption: `"Scan brain, repeat. No signs of job satisfaction."`,
+    caption: `"Scan brain, repeat. Found no signs of job satisfaction."`,
     altImage: haigla,
     question: "What was a defining feature of my radiographer years?",
     choices: [
@@ -82,7 +82,7 @@ const stageData = [
         altCaption: "If only - radiographers hardly have a career ladder. Most work for 40 years and never get promoted",
       },
       {
-        text: "Worked through COVID overtime and realized I needed some more creative and less emotionally exhausting challenges from life. One can't really unsee dying people.",
+        text: "COVID. As if this job was not exhausting enough to begin with. Felt like a true hero, probably were, too.",
         correct: true,
       },
     ],
@@ -109,21 +109,21 @@ const stageData = [
         altCaption: "I did not do it, but I maybe I should. As a side hustle, if my schedule allows it, after you hire me.",
       },
       {
-        text: "Had two babies. Now I have two toddlers. I want them to see me happy and passionate about my job.",
+        text: "Had two babies who think I am the coolest person in the world. I am not, but they might believe it longer if I have a cool person job that I actually love doing.",
         correct: true,
       },
     ],
   },
   {
     title: "Level 5: The Leap",
-    caption: `"I went back to work and thought.. "No"."`,
+    caption: `"I went back to work, did the EXACT same procedure on 20 patients in a row, and thought.. "Is THAT what I do for the rest of my life?"."`,
     altImage: tita,
-    question: "What did I do on maternity leave?",
+    question: "What did I do after maternity leave?",
     choices: [
       {
         text: "Started a podcast where my toddlers commented Eurovision.",
         correct: false,
-        altCaption: " 'I don't know why this woman has no pants on, honey. Maybe there was no money left after buying all these fire cannons'.",
+        altCaption: " 'Why all these people have no pants on, mom?'",
       },
       {
         text: "Launched a fashion line for babies with existential quotes.",
@@ -143,8 +143,8 @@ const stageData = [
   },
   {
     title: "Final Level: Today",
-    caption: `"Code & clarity."`,
-    question: "Where am I now?",
+    caption: `"Star student with self-made fanclub."`,
+    question: "Where to next?",
     choices: [
       {
         text: "Living in the woods building websites to introduce wild animals to toddlers.",
@@ -157,7 +157,7 @@ const stageData = [
         altCaption: "If it was true I would never call it a dating app.",
       },
       {
-        text: "Studying software development, absolutely loving learning, very excited to see what future holds.",
+        text: "Finishing software development studies, absolutely loving learning, somewhat patiently waiting for your job offer.",
         correct: true,
       },
       {
