@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2a66355f.css",
-    "main.js": "/portfolio/static/js/main.c8166b1e.js",
+    "main.css": "/portfolio/static/css/main.8cb623ea.css",
+    "main.js": "/portfolio/static/js/main.8e009bf5.js",
     "static/media/hakaton.png": "/portfolio/static/media/hakaton.7b6e454034e7a775260f.png",
     "static/media/ehitus.png": "/portfolio/static/media/ehitus.577ebb2d823eeb47038a.png",
     "static/media/korrastusabi.png": "/portfolio/static/media/korrastusabi.61ae88dc8fb1ddfa23c6.png",
@@ -15,11 +15,11 @@
     "static/media/haigla.jpg": "/portfolio/static/media/haigla.4c9e52c916187bc6e6f5.jpg",
     "static/media/haaletus.png": "/portfolio/static/media/haaletus.ee897294024ecab423f6.png",
     "index.html": "/portfolio/index.html",
-    "main.2a66355f.css.map": "/portfolio/static/css/main.2a66355f.css.map",
-    "main.c8166b1e.js.map": "/portfolio/static/js/main.c8166b1e.js.map"
+    "main.8cb623ea.css.map": "/portfolio/static/css/main.8cb623ea.css.map",
+    "main.8e009bf5.js.map": "/portfolio/static/js/main.8e009bf5.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a66355f.css",
-    "static/js/main.c8166b1e.js"
+    "static/css/main.8cb623ea.css",
+    "static/js/main.8e009bf5.js"
   ]
 }
