@@ -13,10 +13,10 @@ function Footer({ mode }) {
         </div>
 
         <div className="footer-center">
-          <a href="mailto:your@email.com" target="_blank" rel="noopener noreferrer">
+          <a href="margit.viigi@voco.ee" target="_blank" rel="noopener noreferrer">
             <FaEnvelope />
           </a>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/margitviigi" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
           <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
@@ -26,7 +26,7 @@ function Footer({ mode }) {
 
         <div className="footer-right">
           {isProfessional ? (
-            <span className="footer-tag">Crafted with care </span>
+            <span className="footer-tag">Download my CV here! </span>
           ) : (
             <span className="footer-tag">Designed to have fun and challenge myself.</span>
           )}

@@ -50,7 +50,8 @@ function CustomNavbar({ mode, toggleMode }) {
               </>
             )}
           </Nav>
-
+          {
+/*
           <div className="switch-container">
             <label className="switch">
               <input
@@ -76,7 +77,7 @@ function CustomNavbar({ mode, toggleMode }) {
               </span>
             </label>
             <span className="personality-tag">Personality Mode</span>
-          </div>
+          </div> */} 
         </Navbar.Collapse>
       </div>
     </Navbar>

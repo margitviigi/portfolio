@@ -15,7 +15,7 @@ const projectsData = [
     description: "An app to collect recipes deemed edible by toddlers. Co-created with talented Kaisa.",
     tools: ["React", "CSS", "JavaScript"],
     website: "https://vso24viigi.ita.voco.ee/minitoit2/",
-    github: "#", 
+    github: "https://github.com/kaisaets/MiniToit", 
   },
   {
     id: 2,
@@ -39,10 +39,10 @@ const projectsData = [
     id: 4,
     title: "Hackathon judging tool",
     image: hakaton,
-    description: "I designed the concept and UX; my teammates heroically did most of the coding. Use password marko123 to try it out!",
+    description: "I designed the concept and UX; my teammates heroically did most of the coding. Try it out!",
     tools: ["JavaScript", "CSS", "Google Sheets"],
     website: "https://hindamine.ita.voco.ee/",
-    github: "#",
+    github: "https://github.com/KaarelVv/grading_system",
   },
   {
     id: 5,

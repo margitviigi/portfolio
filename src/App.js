@@ -11,7 +11,6 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
-import IntroScreen from "./components/IntroScreen";
 import AboutGame from "./components/AboutGame";
 import SkillsMatchGame from "./components/SkillsMatch/SkillsMatchGame";
 import TriviaCVGame from "./components/TriviaCVGame";
