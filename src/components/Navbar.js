@@ -1,38 +1,54 @@
-import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import proflogo from "../pildid/logo.png";
 
 function CustomNavbar() {
-  return (
-    <Navbar expand="lg" className="custom-navbar">
-      <div className="navbar-container">
-        <Navbar.Brand as={NavLink} to="/">
-            <img
-              src={proflogo}
-              height="140px"
-              alt="Margit Viigi"
-            />
-        </Navbar.Brand>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto nav-links">
-                <Nav.Link as={NavLink} to="/about" className="nav-item">
-                  <span>About Me</span>
-                </Nav.Link>
-                <Nav.Link as={NavLink} to="/projects" className="nav-item">
-                  <span>My Projects</span>
-                </Nav.Link>
-                <Nav.Link as={NavLink} to="/contact" className="nav-item">
-                  <span>Contact</span>
-                </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+return (
+  <nav className="custom-navbar">
+    <div className="navbar-container">
+      <NavLink to="/" className="logo-link">
+        <img src={proflogo} alt="Margit Viigi" />
+      </NavLink>
+
+      <div className="nav-links desktop-nav">
+        <NavLink to="/about" className="nav-item">
+          About Me
+        </NavLink>
+        <NavLink to="/projects" className="nav-item">
+          My Projects
+        </NavLink>
+        <NavLink to="/contact" className="nav-item">
+          Contact
+        </NavLink>
       </div>
-    </Navbar>
-  );
+
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className="bar" />
+        <div className="bar" />
+        <div className="bar" />
+      </div>
+    </div>
+
+
+    <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+      <NavLink to="/about" className="nav-item" onClick={toggleMenu}>
+        About Me
+      </NavLink>
+      <NavLink to="/projects" className="nav-item" onClick={toggleMenu}>
+        My Projects
+      </NavLink>
+      <NavLink to="/contact" className="nav-item" onClick={toggleMenu}>
+        Contact
+      </NavLink>
+    </div>
+  </nav>
+);
+
 }
 
 export default CustomNavbar;
