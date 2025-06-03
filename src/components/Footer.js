@@ -38,7 +38,8 @@ function Footer() {
         <div className="footer-right">
 
               <span className="footer-tag">Download my CV: </span>
-              <a href="/CV_Margit_Viigi.pdf" download className="cv-link" title="Download CV">
+              <a href="/CV_Margit_Viigi.pdf" download="CV_Margit_Viigi.pdf"   target="_blank"
+  rel="noopener noreferrer" className="cv-link"title="Download CV">
                 <FaDownload />
               </a>
         </div>
