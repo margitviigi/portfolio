@@ -54,7 +54,8 @@ function SkillsMatchGame() {
         <h2>Welcome to Skills Match</h2>
         <p>Match each <strong>GIF</strong> with the statement you guess it best describes. Play both levels to see how my skills have evolved in less than a year! </p>
         <p>Correct = <span style={{ color: "#4ecdc4" }}>blue</span>, Wrong = <span style={{ color: "#ff6b6b" }}>red</span>.</p>
-        <p>You can drag GIFs back and try again!</p>
+        <p>You can drag GIFs back and try again! </p>
+        <p>If you play on your phone, please turn your screen horizontally for best experience. </p>
         <button className="choice-btn" onClick={() => setShowIntro(false)}>▶ Start</button>
       </div>
     );
