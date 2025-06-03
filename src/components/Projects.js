@@ -14,7 +14,7 @@ const projectsData = [
     id: 1,
     title: "Minifood",
     image: minitoit,
-    description: "An app to collect recipes deemed edible by toddlers. Co-created with talented Kaisa.",
+    description: "An app to collect recipes deemed edible by toddlers. Co-created with talented Kaisa. It still has some bugs, and they are due to be fixed in fall 2025 when version 2.0 launches.",
     tools: ["React", "CSS", "JavaScript"],
     website: "https://vso24viigi.ita.voco.ee/minitoit2/",
     github: "https://github.com/kaisaets/MiniToit", 
