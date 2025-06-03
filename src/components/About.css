@@ -1,12 +1,12 @@
 .about-container {
     padding: 10px;
-    max-width: 60%;
+    max-width: 100%;
     margin: auto;
     text-align: center;
     transition: all 0.5s ease-in-out;
     background-color: #121212;
     color: white;
-    border-left: 4px solid white;
+    border-left: 2px solid white;
     padding: 40px;
     text-align: left;
   }

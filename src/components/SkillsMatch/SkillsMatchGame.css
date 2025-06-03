@@ -1,18 +1,99 @@
+.intro-screen {
+  background-color: #111;
+  color: #ffffff;
+  padding: 60px 40px;
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.intro-screen h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.intro-screen p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.intro-screen strong {
+  color: #fff;
+}
+
+.intro-screen span {
+  font-weight: bold;
+}
+
+button.choice-btn {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 28px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button.choice-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+}
+
+button.choice-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .match-game-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 40px 30px;
-  font-family: "Fredoka", sans-serif;
   text-align: center;
-  color: #e7ddb9;
-  background: none;
+  color: #ffffff;
+  background-color: #111;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .match-game-container h2 {
   margin-bottom: 16px;
   font-weight: 700;
   font-size: 2rem;
-  text-shadow: 0 0 6px #ff7674;
+  color: #fff;
+}
+
+.instructions {
+  color: #ccc;
+  margin-top: -10px;
+  margin-bottom: 25px;
+  font-size: 1rem;
 }
 
 .columns {
@@ -31,9 +112,9 @@
 }
 
 .statement-box {
-  background: #e7ddb9;
-  border: 2px dashed #ff6b6b;
-  border-radius: 20px;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 16px;
   min-height: 140px;
   padding: 18px;
   display: flex;
@@ -41,15 +122,13 @@
   justify-content: space-between;
   align-items: center;
   transition: border-color 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(255, 107, 107, 0.25);
-  cursor: default;
-  user-select: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .statement-text {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.1rem;
-  color: #4e4e4e;
+  color: #fff;
   margin-bottom: 12px;
   flex: 1;
   text-align: left;
@@ -58,9 +137,9 @@
 
 .gif-pool {
   flex: 0 0 180px;
-  background: #e7ddb9;
-  border: 2px dashed #4ecdc4;
-  border-radius: 20px;
+  background: #1a1a1a;
+  border: 2px solid #444;
+  border-radius: 16px;
   padding: 16px;
   min-height: 140px;
   display: flex;
@@ -68,7 +147,7 @@
   gap: 16px;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(78, 205, 196, 0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .gif-card,
@@ -76,10 +155,10 @@
   width: 130px;
   height: 120px;
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 3px 8px rgba(253, 114, 94, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.1);
   cursor: grab;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .gif-card:active,
@@ -90,45 +169,51 @@
 
 .level-complete {
   margin-top: 30px;
-  color: #e7ddb9;
-  font-weight: 700;
+  color: #fff;
+  font-weight: 600;
   font-size: 1.3rem;
-  text-shadow: 0 0 8px #ff7674;
 }
 
-/* State styles for correctness */
+/* Color indicators */
 .statement-box.correct {
   border-color: #4ecdc4;
-  background-color: #d1f0ec;
+  background-color: #1a3331;
   box-shadow: 0 0 10px #4ecdc4aa;
 }
 
 .statement-box.incorrect {
   border-color: #ff6b6b;
-  background-color: #fdd7d9;
+  background-color: #331a1a;
   box-shadow: 0 0 10px #ff6b6baa;
 }
-button.next-level-btn {
-  background: linear-gradient(135deg, #ff7674, #fd725e, #eeb11c);
-  color: #e7ddb9;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 12px 30px;
-  border: none;
+
+/* Buttons */
+button.next-level-btn,
+button.choice-btn {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 28px;
+  border: 2px solid #fff;
   border-radius: 30px;
-  box-shadow: 0 6px 12px rgba(255, 118, 116, 0.5);
   cursor: pointer;
-  transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
-  user-select: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-button.next-level-btn:hover {
-  background: linear-gradient(135deg, #eeb11c, #fd725e, #ff7674);
-  box-shadow: 0 8px 20px rgba(255, 183, 59, 0.8);
-  transform: translateY(-3px);
+button.next-level-btn:hover,
+button.choice-btn:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
 }
 
-button.next-level-btn:active {
+button.next-level-btn:active,
+button.choice-btn:active {
   transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(255, 118, 116, 0.3);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
 }
