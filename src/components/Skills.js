@@ -2,13 +2,11 @@ import React from "react";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaDatabase, FaWordpress } from "react-icons/fa";
 import "./Skills.css";
 
-function Skills(props) {
-  const { mode } = props; // Get the mode (either "professional" or "personality")
-  const isProfessional = mode === "professional";
+function Skills() {
 
   return (
-    <div className={`skills-container ${isProfessional ? "professional-mode" : "personality-mode"}`}>
-      <h2 className="skills-title">{isProfessional ? "My Skills" : "Non-conclusive list of what I'm capable of"}</h2>
+    <div className="skills-container">
+      <h2 className="skills-title">My Skills</h2>
 
       <div className="skills-grid">
         <div className="skill-item"><FaHtml5 className="skill-icon" /> <span>HTML</span></div>

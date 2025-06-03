@@ -64,20 +64,19 @@ const projectsData = [
   },
 ];
 
-function Projects({ mode }) {
-  const isProfessional = mode === "professional";
+function Projects() {
 
   return (
-    <div className={`projects-container ${isProfessional ? "professional-mode" : "personality-mode"}`}>
-      <h2 className="projects-title">{isProfessional ? "My Projects" : "Creative Works"}</h2>
-      <div className={`projects-grid`}>
+    <div className="projects-container">
+      <h2 className="projects-title">My Projects</h2>
+      <div className="projects-grid">
         {projectsData.map((project) => (
           <div key={project.id} className="project-card">
             <div className="image-wrapper">
               <img src={project.image} alt={project.title} className="project-image" />
               <div className="card-overlay">
                 <a href={project.website} target="_blank" rel="noopener noreferrer" className="overlay-btn">View Website</a>
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="overlay-btn">View GitHub</a>
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="overlay-btn">View GitHub</a> 
               </div>
             </div>
             <div className="project-info">

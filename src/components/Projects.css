@@ -11,10 +11,6 @@
   margin-bottom: 30px;
 }
 
-.personality-mode h2 {
-  color:#f9f0c6;
-} 
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -121,25 +117,6 @@
 .project-tools {
   margin-top: auto;
   font-size: 0.9rem;
-}
-
-.personality-mode.projects-container {
-  background: none;
-  color: #222;
-}
-
-.personality-mode .project-card {
-  background: linear-gradient(145deg, #ffe2ec, #f9f0c6);
-  color: #222;
-}
-
-.personality-mode .overlay-btn {
-  background:#4fab99;
-  color: white;
-}
-
-.personality-mode .overlay-btn:hover {
-  background: #2c484f;
 }
 
 @media (max-width: 600px) {

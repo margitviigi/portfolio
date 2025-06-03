@@ -6,6 +6,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #0f0f0f;
+    color: #ccc;
+    border-top: 1px solid #444;
   }
   
   .footer-content {
@@ -32,40 +35,62 @@
   }
   
   .footer-center a:hover {
-    color: #ff6699;
+    color: #a84b44;
   }
-  
-  /* Professional Mode */
-  .professional-footer {
-    background-color: #0f0f0f;
-    color: #ccc;
-    border-top: 1px solid #444;
-  }
-  
-  .professional-footer .footer-tag {
-    font-style: italic;
-    opacity: 0.7;
-  }
-  
-  /* Personality Mode */
-  .personality-footer {
-    background-color: #ffe2ec;
-    color: #222;
-    border-top: 2px dashed #ff6699;
-  }
-  
-  .personality-footer .footer-tag {
-    font-style: italic;
-    color: #ff6699;
-    animation: float 3s ease-in-out infinite;
-  }
-  
-  /* Subtle whimsy animation */
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
-    100% { transform: translateY(0); }
-  }
+
+  .copied-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #a84b44;
+  animation: fadeInOut 2s ease forwards;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.icon-btn:hover {
+  color: #a84b44;
+}
+
+.email-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-bubble {
+  position: absolute;
+  bottom: 140%; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  animation: fadeInOut 2s ease forwards;
+  z-index: 10;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
   
   @media (max-width: 600px) {
     .footer-content {
@@ -74,4 +99,3 @@
       gap: 15px;
     }
   }
-  

@@ -3,30 +3,16 @@ import "./Home.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-function Home({ mode }) {
-  const isProfessional = mode === "professional";
-
+function Home() {
   return (
-    <div className={`home-container ${mode}`}>
+    <div className="home-container">
       <motion.h1
         className="welcome-text"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
       >
-        {isProfessional ? (
-          "WELCOME"
-        ) : (
-          <>
-            <span>W</span>
-            <span>E</span>
-            <span>L</span>
-            <span>C</span>
-            <span>O</span>
-            <span>M</span>
-            <span>E</span>
-          </>
-        )}
+          WELCOME
       </motion.h1>
 
       <motion.p
@@ -35,13 +21,11 @@ function Home({ mode }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {isProfessional
-          ? "Explore my work as a full-stack developer to-be."
-          : "…to the creative world of web design, games, and personality insight!"}
+        Explore my work as a full-stack developer to-be.
       </motion.p>
 
       <Link
-        to={isProfessional ? "/projects" : "/AboutGame"}
+        to="/projects"
         style={{ textDecoration: "none", color: "inherit" }}
       >
         <motion.div
@@ -49,7 +33,7 @@ function Home({ mode }) {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          {isProfessional ? "Discover my projects" : "Start the first game"}
+          Discover my projects
         </motion.div>
       </Link>
     </div>

@@ -1,17 +1,14 @@
 import React from "react";
 import "./About.css";
 import profilePic from "../pildid/minupilt.png";
-import AboutGame from "./AboutGame";
 
-function About({ mode }) {
-  const isProfessional = mode === "professional";
+
+function About() {
   return (
-    <section className={`about-container ${mode}`}>
-      {isProfessional ? (
-        <>
+    <section className="about-container">
           <h2 className="about-title">About Me</h2>
           <div className="about-content">
-            <img src={profilePic} alt="Margit Viigi" className={`profile-pic ${mode}`} />
+            <img src={profilePic} alt="Margit Viigi" className="profile-pic"/>
             <div className="about-text">
               <p>
                 My name is <strong>Margit</strong> and I am currently studying <strong>software development</strong> at Tartu Vocational College. Previously, I worked at a
@@ -31,10 +28,6 @@ function About({ mode }) {
               </p>
             </div>
           </div>
-        </>
-      ) : (
-        <AboutGame />
-      )}
     </section>
   );
 }
